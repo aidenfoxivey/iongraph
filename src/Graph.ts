@@ -1329,8 +1329,8 @@ export class Graph {
     row.appendChild(num);
 
     const opcode = document.createElement("td");
-    opcode.innerHTML = prettyOpcode.replace(/([A-Za-z0-9_]+)#(\d+)/g, (_, name, id) => {
-      return `<span class="ig-use ig-highlightable" data-ig-use="${id}">${name}#${id}</span>`;
+    opcode.innerHTML = prettyOpcode.replace(/(v)(\d+)/g, (_, name, id) => {
+      return `<span class="ig-use ig-highlightable" data-ig-use="${id}">${name}${id}</span>`;
     });
     row.appendChild(opcode);
 
