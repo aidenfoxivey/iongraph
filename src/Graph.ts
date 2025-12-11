@@ -1325,7 +1325,7 @@ export class Graph {
 
     const num = document.createElement("td");
     num.classList.add("ig-ins-num");
-    num.innerText = String(ins.id);
+    num.innerText = String(`v${ins.id}`);
     row.appendChild(num);
 
     const opcode = document.createElement("td");
